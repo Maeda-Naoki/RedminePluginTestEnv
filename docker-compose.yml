@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   redmine:
-    image: redmine:4.1.0
+    image: redmine:4.1.0-alpine
     ports:
       - 8080:3000
     restart: always
@@ -12,7 +12,7 @@ services:
       REDMINE_DB_PASSWORD: password
 
   db:
-    image: postgres:12.2
+    image: postgres:12.2-alpine
     restart: always
     environment:
       POSTGRES_USER: postgres
