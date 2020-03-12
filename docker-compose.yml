@@ -18,3 +18,9 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
+  
+  nginx:
+    image: nginx:1.17.9-alpine
+    restart: always
+    ports:
+      - 80:80
