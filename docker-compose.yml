@@ -11,6 +11,7 @@ services:
       RAILS_RELATIVE_URL_ROOT: /redmine
     volumes:
       - ./redmine/config/config.ru:/usr/src/redmine/config.ru
+      - ./redmine/plugins:/usr/src/redmine/plugins
 
   db:
     image: postgres:12.2-alpine
